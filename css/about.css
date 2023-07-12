@@ -1,0 +1,129 @@
+.about-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.main-row {
+    width: 100%;
+    padding: 50px 100px;
+}
+
+.image-section {
+    width: 30%;
+    float: left;
+    margin-left: -100px;
+}
+.image-section img {
+    width: 100%;
+    height: auto;
+    margin-top: 120px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.about-content {
+    width: 60%;
+    float: left;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    margin-top: -50px;
+}
+.about-content h1 {
+    font-size: 50px;
+    letter-spacing: 3.5px;
+    margin-top: 25px;
+    color: #ff0054;
+}
+.about-content h2 {
+    margin-top: 25px;
+}
+.about-content p {
+    font-size: 20px;
+    margin-top: 10px;
+    line-height: 1.5;
+    max-width: 95%;
+}
+
+@media screen and (max-width: 768px) {
+    .image-section {
+        width: 100%;
+        float: none;
+        margin-left: -100px;
+        margin-top: -160px;
+    }
+    .image-section img {border-radius: 50px;}
+
+    .about-content {
+        width: 100%;
+        float: none;
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+    .about-content p {
+        max-width: 80%;
+    }
+    .about-content h1,
+    .about-content h2,
+    .about-content p {
+        text-align: left;
+        margin-left: -20px;
+    }
+    .about-content hr {
+        visibility: hidden;
+    }
+}
+@media screen and (max-width: 486px) {
+    .image-section {
+        width: 100%;
+        float: none;
+        margin-left: -100px;
+        margin-top: -160px;
+    }
+    .image-section img {border-radius: 50px;}
+
+    .about-content {
+        width: 100%;
+        float: none;
+        margin-left: 0px;
+    }
+    .about-content h1,
+    .about-content h2,
+    .about-content p {
+        text-align: left;
+        margin-left: -20px;
+        max-width: 60%;
+    }
+    .about-content hr {
+        visibility: hidden;
+    }
+}
+@media screen and (max-width: 375px) {
+    .image-section {
+        width: 100%;
+        float: none;
+        margin-left: -100px;
+        margin-top: -160px;
+    }
+    .image-section img {border-radius: 50px;}
+
+    .about-content {
+        width: 100%;
+        float: none;
+        margin-left: 0px;
+    }
+    .about-content h1,
+    .about-content h2,
+    .about-content p {
+        text-align: left;
+        margin-left: -20px;
+        max-width: 60%;
+    }
+    .about-content h1,
+    .about-content h2 {
+        font-size: 30px;
+    }
+    .about-content hr {
+        visibility: hidden;
+    }
+}

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Contact Us| Pawsome Furiends</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="stylesheet" href="css/header-footer.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body>
+    <!-- Header / Navigation Bar -->
+    <div class="bar">
+        <div class="bar__content u-centered">
+            <img class="bar__logo" src="assets/logo2.png" alt="Pawsome Furiends">
+            <input type="checkbox" id="inpNavToggle">
+            <label class="bar__nav-toggle" for="inpNavToggle">
+                <i class="material-icons">menu</i>
+            </label>
+            <nav class="nav">
+                <a class="nav__link" href="index.html">Home</a>
+                <a class="nav__link" href="about.html">About Us </a>
+                <a class="nav__link" href="services.html">Services </a>
+                <a class="nav__link" href="reviews.html">Reviews </a>
+                <a href="#" class="nav__link active">Contact Us </a>
+            </nav>
+        </div>
+    <!-- End of Header / Navigation Bar -->   
+    
+    <!-- Main Content Starts Here -->
+    <div class="slider-container">       
+        <div class="main-container">
+            <div class="content">
+                <div class="left-side">
+
+                    <div class="main-schedule details hide-icons">
+                        <i class="far fa-clock"></i>
+                        <div class="topic">Store Schedule</div>
+                        <div class="text-one">MON - SUN<br>9:00 AM - 6:00 PM</div>
+                    </div>
+                    
+                    <div class="main-address details hide-icons">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="topic">Address</div>
+                        <div class="text-one">BLK F1, LOT 5 Brgy. Sta. Cristina I Area C Dasmari&ntilde;as, Cavite</div>
+                    </div>
+
+                    <div class="main-phone details hide-icons">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="topic">Phone</div>
+                        <div class="text-one">0905 484 2085</div>
+                    </div>
+
+                    <div class="main-email details hide-icons">
+                        <i class="fas fa-envelope"></i>
+                        <div class="topic">Email</div>
+                        <div class="text-one">pawsomefuriendsph@gmail.com</div>
+                    </div>
+
+                    <div class="main-facebook details hide-icons">
+                        <i class="fab fa-facebook-square"></i>
+                        <div class="topic">Facebook</div>
+                        <div class="text-one">@pawsomeservicesdasma</div>
+                    </div>
+
+                </div>
+
+                    <div class="right-side">
+                        <div class="topic-text">Connect With Us!</div>
+                        <p>PAWSOME FURIENDS is your go-to for amazing pet services and essentials. 
+                            Have a question or need assistance? Reach out to us through the contact 
+                            information below. We're here to make your furry friends' experience extraordinary!</p>
+                    
+                        <form id="contact-form" action="contact-form">
+
+                            <div class="input-box">
+                                <input type="text" id="name-input" placeholder="Your Name (Required)">
+                            </div>
+
+                            <div class="email-box">
+                                <input type="email" id="email-input" placeholder="Your Email Address (Required)">
+                            </div>
+
+                            <div class="input-box">
+                                <input type="text" id="subject-input" placeholder="Subject">
+                            </div>
+
+                            <div class="input-box message-box">
+                                <textarea placeholder="Message (Required)" id="message-input"></textarea>
+                            </div>
+
+                            <div class="button">
+                                <input type="submit" value="Submit">
+                            </div>
+
+                        </form>
+                    </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <section class="container">
+                <div class="schedule">
+                    <h3>Store Schedule</h3>
+                    <p>Mon - Sun : 9:00 AM - 6:00 PM</p>
+                </div>
+                <div class="address">
+                    <h3>Address</h3>
+                    <p>BLK F1, LOT 5 Brgy. Sta. Cristina I Area C Dasmari&ntilde;as, Cavite</p>
+                </div>
+                <div class="phone">
+                    <h3>Phone</h3>
+                    <p>0905 484 2085</p>
+                </div>
+                <div class="socials">
+                    <a href="https://www.facebook.com/pawsomeservicesdasma" target="_blank">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+                </div>
+            </section>
+            <section class="copyright">CodeCrafters Collaborative &copy; 2023<br>BSIT 1-7 CvSu Trece Campus A.Y 2022 - 2023</section>
+        </footer>
+        <!-- End of Footer -->
+        </div>
+    </div>
+
+    <script src="js/header-footer.js"></script>
+    <script>
+    const icons = document.querySelectorAll('.hide-icons');
+
+    const navToggle = document.getElementById('inpNavToggle');
+    navToggle.addEventListener('change', function () {
+        if (this.checked) {
+        icons.forEach(function (icon) {
+            icon.style.display = 'none';
+        });
+        } else {
+        icons.forEach(function (icon) {
+            icon.style.display = 'inline-block';
+        });
+        }
+    });
+    </script>
+    <script>
+        // Get the contact form element
+        const contactForm = document.getElementById('contact-form');
+      
+        // Function to handle form submission
+        const submitForm = (event) => {
+          event.preventDefault(); // Prevent form from submitting normally
+      
+          // Get form input values
+          const name = document.getElementById('name-input').value;
+          const email = document.getElementById('email-input').value;
+          const subject = document.getElementById('subject-input').value;
+          const message = document.getElementById('message-input').value;
+      
+          // Construct the mailto URL
+          const mailtoUrl = `mailto:pawsomefuriendsph@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+            `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
+          )}`;
+      
+          // Open the user's default mailing program
+          window.location.href = mailtoUrl;
+        };
+      
+        // Add form submit event listener
+        contactForm.addEventListener('submit', submitForm);
+    </script>
+    <!-- End of JS -->
+</body>
+</html>

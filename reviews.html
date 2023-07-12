@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Reviews | Pawsome Furiends</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="stylesheet" href="css/header-footer.css">
+    <link rel="stylesheet" href="css/reviews.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body>
+    <!-- Header / Navigation Bar -->
+    <div class="bar">
+        <div class="bar__content u-centered">
+            <img class="bar__logo" src="assets/logo2.png" alt="Pawsome Furiends">
+            <input type="checkbox" id="inpNavToggle">
+            <label class="bar__nav-toggle" for="inpNavToggle">
+                <i class="material-icons">menu</i>
+            </label>
+            <nav class="nav">
+                <a class="nav__link" href="index.html">Home</a>
+                <a class="nav__link" href="about.html">About Us </a>
+                <a class="nav__link" href="services.html">Services </a>
+                <a href="#" class="nav__link active">Reviews </a>
+                <a class="nav__link" href="contact.html">Contact Us </a>
+            </nav>
+        </div>
+        <!-- End of Header / Navigation Bar -->   
+    
+        <!-- Reviews Page Content Starts Here -->
+        <div class="slider-container">
+            <div class="review-title">
+                <h1>Our Furiends Paw-sitive Reviews</h1>
+                <p>Our pet shop values our awesome customers and actively listens to their 
+                    feedback to ensure an exceptional experience for both pets and their owners.</p>
+            </div>
+            <div class="reviews-container">
+                <div class="gallery">
+
+                    <a href="images/r1.png" data-lightbox="review" data-title="Review #1">
+                        <img src="images/r1.png" alt="#">
+                    </a>
+                    
+                    <a href="images/r2.png" data-lightbox="review" data-title="Review #2" data-index="1" class="review-image">
+                        <img src="images/r2.png" alt="#">
+                    </a>
+
+                    <a href="images/r3.png" data-lightbox="review" data-title="Review #3" data-index="2" class="review-image">
+                        <img src="images/r3.png" alt="#">
+                    </a>
+                    
+                    <a href="images/r4.png" data-lightbox="review" data-title="Review #4" data-index="3" class="review-image">
+                        <img src="images/r4.png" alt="#">
+                    </a>
+                    
+                    <a href="images/r5.png" data-lightbox="review" data-title="Review #5" data-index="4" class="review-image">
+                        <img src="images/r5.png" alt="#">
+                    </a>
+                    
+                    <a href="images/r6.png" data-lightbox="review" data-title="Review #6" data-index="5" class="review-image">
+                        <img src="images/r6.png" alt="#">
+                    </a>
+                    
+                    <a href="images/r7.png" data-lightbox="review" data-title="Review #7" data-index="6" class="review-image">
+                        <img src="images/r7.png" alt="#">
+                    </a>
+                    
+                    <a href="images/r8.png" data-lightbox="review" data-title="Review #8" data-index="7" class="review-image">
+                        <img src="images/r8.png" alt="#">
+                    </a>
+                    
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer>
+                <section class="container">
+                    <div class="schedule">
+                        <h3>Store Schedule</h3>
+                        <p>Mon - Sun : 9:00 AM - 6:00 PM</p>
+                    </div>
+                    <div class="address">
+                        <h3>Address</h3>
+                        <p>BLK F1, LOT 5 Brgy. Sta. Cristina I Area C Dasmari&ntilde;as, Cavite</p>
+                    </div>
+                    <div class="phone">
+                        <h3>Phone</h3>
+                        <p>0905 484 2085</p>
+                    </div>
+                    <div class="socials">
+                        <a href="https://www.facebook.com/pawsomeservicesdasma" target="_blank">
+                            <i class="fab fa-facebook-square"></i>
+                        </a>
+                    </div>
+                </section>
+                <section class="copyright">CodeCrafters Collaborative &copy; 2023<br>BSIT 1-7 CvSu Trece Campus A.Y 2022 - 2023</section>
+            </footer>
+        </div>
+        <!-- End of Footer -->
+    </div>
+
+    <script src="js/header-footer.js"></script>
+    <script src="js/lightbox-plus-jquery.js"></script>
+    <script>
+        // Get all the review images
+        const reviewImages = document.querySelectorAll('.review-image');
+
+        // Store the currently selected image index
+        let currentIndex = 0;
+
+        // Function to navigate to the next image
+        const goToNextImage = () => {
+        if (currentIndex < reviewImages.length - 1) {
+            currentIndex++;
+            reviewImages[currentIndex].click(); // Simulate a click on the next image
+        }
+        };
+
+        // Function to navigate to the previous image
+        const goToPreviousImage = () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            reviewImages[currentIndex].click(); // Simulate a click on the previous image
+        }
+        };
+
+        // Listen for keydown events
+        document.addEventListener('keydown', (event) => {
+        // Check if the arrow keys are pressed
+        if (event.key === 'ArrowRight') {
+            goToNextImage(); // Go to the next image on right arrow key press
+        } else if (event.key === 'ArrowLeft') {
+            goToPreviousImage(); // Go to the previous image on left arrow key press
+        }
+        });
+    </script>
+</body>
+</html>
