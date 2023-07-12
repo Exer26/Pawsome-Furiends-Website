@@ -52,16 +52,18 @@
         <section class="carousel-container hide-on-dropdown">
             <div class="slider-wrapper">
                 <div class="slider">
-
-                    <img id="slide-1" src="images/ad1.png" alt="Slide 1"/>
-                    <img id="slide-2" src="images/ad2.png" alt="Slide 2"/>
-                    <img id="slide-3" src="images/card.jpg" alt="Slide 3"/>
-
+                    <!--Landscape Images for Desktop Viewing-->
+                    <img id="slide-1" class="hide-on-mobile" src="images/ad1.png" alt="Slide 1"/>
+                    <img id="slide-2" class="hide-on-mobile" src="images/ad2.png" alt="Slide 2"/>
+                    <img id="slide-3" class="hide-on-mobile" src="images/card.jpg" alt="Slide 3"/>
+                    <!--Portrait Images for Mobile Viewing-->
+                    <img id="slide-1-mobile" class="show-on-mobile" src="images/promo1.jpg" alt="Slide 1"/>
+                    <img id="slide-2-mobile" class="show-on-mobile" src="images/promo2.jpg" alt="Slide 2"/>
                 </div>
                 <div class="slider-nav">
                     <a href="#slide-1"></a>
                     <a href="#slide-2"></a>
-                    <a href="#slide-3"></a>
+                    <a href="#slide-3" class="hide-on-mobile"></a>
                 </div>
             </div>
         </section>
@@ -101,7 +103,8 @@
             <!--Row 3-->
             <div class="columns">
                 <div class="image">
-                    <img src="images/lounge-area.jpg" id="image3" alt="Image 3">
+                    <img src="images/lounge-area.jpg" id="image3" alt="Image 3" style="border-top-right-radius: 60px;
+                    border-bottom-right-radius: 60px;">
                 </div>
                 <div class="content">
                     <div class="content-container">
