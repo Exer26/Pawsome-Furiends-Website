@@ -58,10 +58,6 @@
     padding: 2rem;
 }
 
-.slider-container {
-  overflow-x: hidden;
-}
-
 .slider-wrapper {
     position: relative;
     max-width: 1000rem;
