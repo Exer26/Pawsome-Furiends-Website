@@ -31,7 +31,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 .slider-container {
-    height: calc(658px - var(--bar-height)); /* Subtract the height of the header/navbar */
+    height: 85vh; /*calc(658px - var(--bar-height));  Subtract the height of the header/navbar */
     overflow-y: auto;
     overflow-x: hidden;  
 }
